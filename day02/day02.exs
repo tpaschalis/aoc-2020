@@ -1,5 +1,5 @@
-# tpaschalis 2020-12-01
-# Advent of Code 2020 - Day 01
+# tpaschalis 2020-12-02
+# Advent of Code 2020 - Day 02
 
 ## Notes
 # https://stackoverflow.com/questions/49535735/whats-the-shortest-way-to-count-substring-occurrence-in-string-elixir
