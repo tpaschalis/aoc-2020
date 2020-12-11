@@ -58,7 +58,7 @@ defmodule Day11 do
         scanUpperLeft(grid, x, y) + 
         scanUpperRight(grid, x, y) + 
         scanLowerLeft(grid, x, y) + 
-        scnLowerRight(grid, x, y)
+        scanLowerRight(grid, x, y)
     end
 
     defp scanRight(grid, x, y) do
@@ -152,10 +152,10 @@ defmodule Day11 do
         end
     end
 
-    defp scnLowerRight(grid, x, y) do
+    defp scanLowerRight(grid, x, y) do
         case grid[x+1][y+1] do
             "." -> 
-                scnLowerRight(grid, x+1, y+1)
+                scanLowerRight(grid, x+1, y+1)
             "L" -> 
                 0
             "#" -> 
