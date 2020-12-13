@@ -2,18 +2,19 @@
 # Advent of Code 2020 - Day 12
 
 defmodule Day13 do
-    # def bruteForceCongruence(values, idx) do
-    #     IO.inspect(idx)
-    #     n = values |> Enum.map(fn {n, m} -> rem(idx+m, n) == 0 end) |> Enum.count(fn v -> v end)
-    #     if n == 9 do # num of constraints -> 
-    #         idx
-    #     else 
-    #         bruteForceCongruence(values, idx+373)
-    #     end
-    # end
+    def bruteForceCongruence(values, idx) do
+        # IO.inspect(idx)
+        n = values |> Enum.map(fn {n, m} -> rem(idx+m, n) == 0 end) |> Enum.count(fn v -> v end)
+        if n == 9 do # num of constraints -> 
+            idx
+        else 
+            bruteForceCongruence(values, idx+19)
+        end
+    end
 
-    # thanks to github.com/omginbd for 
+    # thanks to github.com/omginbd for
     # the Chinese Remainder Theorem implementation
+    # Also, nice discussion on https://elixirforum.com/t/advent-of-code-2020-day-13/36180
     def findEarliest(buses) do
         starting_point = buses
         |> Enum.map(&(elem(&1, 0)))
@@ -71,3 +72,6 @@ b = strBuses
 
 res2 = Day13.findEarliest(b)
 IO.inspect(res2)
+
+res3 = Day13.bruteForceCongruence(b, 500000000000000)
+IO.inspect(res3)
