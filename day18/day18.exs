@@ -1,5 +1,5 @@
-# tpaschalis 2020-12-16
-# Advent of Code 2020 - Day 16
+# tpaschalis 2020-12-18
+# Advent of Code 2020 - Day 18
 
 # {:ok, input} = File.read("input.sample")
 {:ok, input} = File.read("input.txt")
